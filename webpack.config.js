@@ -7,6 +7,11 @@ module.exports = {
         app: './src/index.js',
         print: './src/print.js'
     },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
+    },
     plugins: [
         // 清除构建目标文件夹./dist
         new CleanWebpackPlugin({
@@ -17,8 +22,8 @@ module.exports = {
             title: '输出管理'
         })
     ],
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist')
+    devtool: 'inline-source-map',
+    devServer: {
+        contentBase: './dist'
     }
 }
