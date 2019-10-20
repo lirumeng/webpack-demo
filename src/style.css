@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'ChenjishiYingbiXingshu';
+    src: url('./assets/font/chenjishi_yingbi_xingshu.woff') format('woff'), url('./assets/font/chenjishi_yingbi_xingshu.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.hello {
+    font-family: 'ChenjishiYingbiXingshu';
+    color: red;
+    background-image: url('./assets/images/bg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
