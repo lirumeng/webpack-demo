@@ -1,18 +1,31 @@
-import _ from 'lodash'
-import printMain from './print.js'
+import './style.scss'
+import Icon1 from './happy.jpg'
+import Icon2 from './logo.png'
+import aFun from './a'
 
-function component() {
-    var element = document.createElement('div')
-    var btn = document.createElement('button');
+console.log('hello lirm!')
 
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ')
+function func() {
+  var element = document.createElement('div');
+  var img1 = new Image();
+  img1.src = Icon1;
 
-    btn.innerHTML = 'Click me and check the console';
-    btn.onclick = printMain
+  var img2 = new Image();
+  img2.src = Icon2;
 
-    element.appendChild(btn)
+  element.appendChild(img1);
+  element.appendChild(img2);
 
-    return element
+  return element;
 }
 
-document.body.appendChild(component())
+document.body.appendChild(func());
+
+
+if (process.env.NODE_ENV === 'development') {
+  console.log('baseurl is localhost');
+} else {
+  console.log('baseurl is imooc')
+}
+
+aFun();
